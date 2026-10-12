@@ -1,0 +1,26 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1280" height="640" viewBox="0 0 1280 640" role="img" aria-labelledby="title desc">
+<title id="title">dicleak — medical-imaging CSV manifest audit</title>
+<desc id="desc">Conceptual synthetic illustration: SYN-001 appears in train and test. dicleak checks a supplied CSV manifest; it does not scan DICOM. Critical overlap fails the audit.</desc>
+<defs>
+<linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0b1527"/><stop offset="1" stop-color="#13263b"/></linearGradient>
+</defs>
+<rect width="1280" height="640" fill="url(#bg)"/>
+<rect x="0" y="0" width="1280" height="8" fill="#a7e6a8"/>
+<circle cx="1240" cy="10" r="220" fill="#a7e6a8" opacity="0.045"/>
+<g font-family="DejaVu Sans, Arial, sans-serif"><rect x="64" y="59" width="122" height="31" rx="15" fill="#a7e6a8" fill-opacity="0.13"/>
+<text x="125" y="81" text-anchor="middle" fill="#a7e6a8" font-size="15" font-weight="700">OPEN SOURCE</text>
+<text x="200" y="81" fill="#9db2c8" font-size="16">MEDICAL-IMAGING ML</text>
+<text x="64" y="164" fill="#f6f9fd" font-size="66" font-weight="700">dicleak</text>
+<text x="64" y="262" fill="#f6f9fd" font-size="47" font-weight="700">Audit the split.</text>
+<text x="64" y="322" fill="#f6f9fd" font-size="47" font-weight="700">Before you train.</text>
+<text x="64" y="399" fill="#b7c9dd" font-size="23">Patient overlap and split checks</text>
+<text x="64" y="432" fill="#b7c9dd" font-size="23">for a supplied CSV manifest.</text><rect x="686" y="104" width="530" height="420" rx="20" fill="#192d43" stroke="#3d586f"/>
+<text x="714" y="145" fill="#9db2c8" font-size="17">SYNTHETIC MANIFEST ILLUSTRATION</text>
+<text x="781" y="192" text-anchor="middle" fill="#d4e0ed" font-size="18" font-weight="700">TRAIN</text><rect x="714" y="212" width="138" height="49" rx="9" fill="#482f30" stroke="#f8ba81"/><text x="783" y="243" text-anchor="middle" fill="#ffd3ab" font-size="18">SYN-001</text><rect x="714" y="281" width="138" height="49" rx="9" fill="#233d56" stroke="#36546f"/><text x="783" y="312" text-anchor="middle" fill="#cedbea" font-size="18">SYN-002</text><text x="949" y="192" text-anchor="middle" fill="#d4e0ed" font-size="18" font-weight="700">VAL</text><rect x="882" y="212" width="138" height="49" rx="9" fill="#233d56" stroke="#36546f"/><text x="951" y="243" text-anchor="middle" fill="#cedbea" font-size="18">SYN-061</text><rect x="882" y="281" width="138" height="49" rx="9" fill="#233d56" stroke="#36546f"/><text x="951" y="312" text-anchor="middle" fill="#cedbea" font-size="18">SYN-062</text><text x="1117" y="192" text-anchor="middle" fill="#d4e0ed" font-size="18" font-weight="700">TEST</text><rect x="1050" y="212" width="138" height="49" rx="9" fill="#233d56" stroke="#36546f"/><text x="1119" y="243" text-anchor="middle" fill="#cedbea" font-size="18">SYN-081</text><rect x="1050" y="281" width="138" height="49" rx="9" fill="#482f30" stroke="#f8ba81"/><text x="1119" y="312" text-anchor="middle" fill="#ffd3ab" font-size="18">SYN-001</text><path d="M783 339 V363 H1119 V339" fill="none" stroke="#f8ba81" stroke-width="2"/>
+<text x="951" y="403" text-anchor="middle" fill="#ffd3ab" font-size="23" font-weight="700">One patient, two splits</text>
+<rect x="714" y="433" width="474" height="55" rx="10" fill="#263c38"/>
+<text x="951" y="467" text-anchor="middle" fill="#b7ecc0" font-size="20">CRITICAL overlap → audit fails</text>
+<line x1="64" y1="566" x2="1216" y2="566" stroke="#36506b"/>
+<text x="64" y="608" fill="#d3e0ef" font-size="19">Manifest only · No DICOM scanning</text>
+<text x="1216" y="608" text-anchor="end" fill="#91a7be" font-size="18">github.com/chenmei24</text>
+</g></svg>
