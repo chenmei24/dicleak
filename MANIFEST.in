@@ -1,0 +1,5 @@
+include README.zh-CN.md CHANGELOG.md CONTRIBUTING.md
+recursive-include samples *.csv *.py
+recursive-include docs *.md *.json *.svg *.png *.csv
+recursive-include tests *.py
+recursive-include assets *.svg *.png
