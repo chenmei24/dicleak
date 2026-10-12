@@ -1,0 +1,34 @@
+name: Bug report
+description: Report incorrect behavior with a small synthetic manifest
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: "Use synthetic data only. Do not attach patient identifiers, images, credentials, or clinical documents."
+  - type: input
+    id: version
+    attributes:
+      label: Version and environment
+      placeholder: "dicleak 0.1.1; Python 3.11; Windows 11"
+    validations:
+      required: true
+  - type: textarea
+    id: command
+    attributes:
+      label: Command and split design
+      description: Include holdout/CV mode and label assumptions.
+    validations:
+      required: true
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Synthetic CSV and observed result
+      description: Provide the smallest example and the exit code.
+    validations:
+      required: true
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected result
+    validations:
+      required: true
