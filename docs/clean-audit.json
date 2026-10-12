@@ -1,0 +1,77 @@
+{
+  "tool": "dicleak",
+  "version": "0.1.1",
+  "gate": "pass",
+  "heuristic_score": 100,
+  "score_note": "Unvalidated deduction heuristic; not a clinical or statistical quality score.",
+  "scope": "Manifest checks only. No images, DICOM metadata, content hashes, model predictions, or external validation were inspected. A passing gate is not evidence of clinical validity, de-identification, regulatory compliance, or publication readiness.",
+  "configuration": {
+    "split_mode": "holdout",
+    "folds": [],
+    "label_mode": "row",
+    "allow_single_class": false,
+    "show_ids": false
+  },
+  "dataset": {
+    "input_rows": 200,
+    "valid_rows": 200,
+    "invalid_rows": 0,
+    "unique_patients": 100,
+    "partitions": {
+      "test": {
+        "rows": 40,
+        "patients": 20,
+        "labels": {
+          "0": {
+            "rows": 20,
+            "patients": 10
+          },
+          "1": {
+            "rows": 20,
+            "patients": 10
+          }
+        }
+      },
+      "train": {
+        "rows": 120,
+        "patients": 60,
+        "labels": {
+          "0": {
+            "rows": 60,
+            "patients": 30
+          },
+          "1": {
+            "rows": 60,
+            "patients": 30
+          }
+        }
+      },
+      "val": {
+        "rows": 40,
+        "patients": 20,
+        "labels": {
+          "0": {
+            "rows": 20,
+            "patients": 10
+          },
+          "1": {
+            "rows": 20,
+            "patients": 10
+          }
+        }
+      }
+    },
+    "labels": {
+      "0": {
+        "rows": 100,
+        "patients": 50
+      },
+      "1": {
+        "rows": 100,
+        "patients": 50
+      }
+    }
+  },
+  "input_diagnostics": [],
+  "findings": []
+}

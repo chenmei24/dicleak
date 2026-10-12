@@ -1,0 +1,136 @@
+{
+  "tool": "dicleak",
+  "version": "0.1.1",
+  "gate": "fail",
+  "heuristic_score": 62,
+  "score_note": "Unvalidated deduction heuristic; not a clinical or statistical quality score.",
+  "scope": "Manifest checks only. No images, DICOM metadata, content hashes, model predictions, or external validation were inspected. A passing gate is not evidence of clinical validity, de-identification, regulatory compliance, or publication readiness.",
+  "configuration": {
+    "split_mode": "holdout",
+    "folds": [],
+    "label_mode": "row",
+    "allow_single_class": false,
+    "show_ids": false
+  },
+  "dataset": {
+    "input_rows": 206,
+    "valid_rows": 203,
+    "invalid_rows": 3,
+    "unique_patients": 101,
+    "partitions": {
+      "test": {
+        "rows": 41,
+        "patients": 21,
+        "labels": {
+          "0": {
+            "rows": 20,
+            "patients": 10
+          },
+          "1": {
+            "rows": 21,
+            "patients": 11
+          }
+        }
+      },
+      "train": {
+        "rows": 122,
+        "patients": 61,
+        "labels": {
+          "0": {
+            "rows": 60,
+            "patients": 30
+          },
+          "1": {
+            "rows": 62,
+            "patients": 31
+          }
+        }
+      },
+      "val": {
+        "rows": 40,
+        "patients": 20,
+        "labels": {
+          "0": {
+            "rows": 20,
+            "patients": 10
+          },
+          "1": {
+            "rows": 20,
+            "patients": 10
+          }
+        }
+      }
+    },
+    "labels": {
+      "0": {
+        "rows": 100,
+        "patients": 50
+      },
+      "1": {
+        "rows": 103,
+        "patients": 51
+      }
+    }
+  },
+  "input_diagnostics": [
+    {
+      "line": 205,
+      "code": "missing_value",
+      "message": "empty required field: patient_id"
+    },
+    {
+      "line": 206,
+      "code": "unknown_split",
+      "message": "unrecognized split; use the configured split names"
+    },
+    {
+      "line": 207,
+      "code": "missing_value",
+      "message": "empty required field: label"
+    }
+  ],
+  "findings": [
+    {
+      "check_id": "input_validation",
+      "severity": "CRITICAL",
+      "title": "Input line 205: empty required field: patient_id",
+      "detail": "Invalid input rows are excluded from distribution checks but always fail the audit gate. Correct the manifest and rerun.",
+      "deduction": 5
+    },
+    {
+      "check_id": "input_validation",
+      "severity": "CRITICAL",
+      "title": "Input line 206: unrecognized split; use the configured split names",
+      "detail": "Invalid input rows are excluded from distribution checks but always fail the audit gate. Correct the manifest and rerun.",
+      "deduction": 5
+    },
+    {
+      "check_id": "input_validation",
+      "severity": "CRITICAL",
+      "title": "Input line 207: empty required field: label",
+      "detail": "Invalid input rows are excluded from distribution checks but always fail the audit gate. Correct the manifest and rerun.",
+      "deduction": 5
+    },
+    {
+      "check_id": "leakage",
+      "severity": "CRITICAL",
+      "title": "1 patient(s) occur in multiple partitions",
+      "detail": "One patient must remain in one partition (or one held-out fold assignment). Rebuild the split at patient level.",
+      "deduction": 10
+    },
+    {
+      "check_id": "phi_risk",
+      "severity": "HIGH",
+      "title": "1 patient identifier(s) match a name-like pattern",
+      "detail": "A limited Latin-character name-pattern heuristic matched these identifiers. False positives and false negatives are expected. This check does not establish de-identification or regulatory compliance. Review source data privately.",
+      "deduction": 8
+    },
+    {
+      "check_id": "duplicates",
+      "severity": "MEDIUM",
+      "title": "1 filepath value(s) repeat in the manifest",
+      "detail": "This compares exact path strings only. Repeated paths may overweight observations, but no files, hashes, DICOM headers, or image pixels are inspected; equal or different paths do not establish content identity.",
+      "deduction": 5
+    }
+  ]
+}
