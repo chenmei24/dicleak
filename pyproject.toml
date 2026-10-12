@@ -1,22 +1,29 @@
 [project]
 name = "dicleak"
-version = "0.1.0"
-description = "Dataset integrity auditor for medical-imaging AI: catch patient-level data leakage and split flaws before they sink your model or paper"
+version = "0.1.1"
+description = "Audit medical-imaging CSV manifests for patient-level leakage, invalid split assignments, and dataset integrity issues"
 readme = "README.md"
 requires-python = ">=3.9"
-license = { text = "MIT" }
+license = "MIT"
+license-files = ["LICENSE"]
 authors = [{ name = "dicleak contributors" }]
 keywords = ["medical-imaging", "dicom", "dataset", "data-leakage", "machine-learning", "validation"]
 dependencies = []
 
+[project.urls]
+Homepage = "https://github.com/chenmei24/dicleak"
+Repository = "https://github.com/chenmei24/dicleak"
+Issues = "https://github.com/chenmei24/dicleak/issues"
+Changelog = "https://github.com/chenmei24/dicleak/blob/master/CHANGELOG.md"
+
 [project.optional-dependencies]
-dev = ["pytest>=8.0"]
+dev = ["pytest>=8.0", "build>=1.0"]
 
 [project.scripts]
 dicleak = "dicleak.cli:main"
 
 [build-system]
-requires = ["setuptools>=61"]
+requires = ["setuptools>=77.0.3"]
 build-backend = "setuptools.build_meta"
 
 [tool.setuptools.packages.find]

@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1000" height="470" viewBox="0 0 1000 470" role="img" aria-labelledby="title description">
+<title id="title">dicleak synthetic manifest audit examples</title>
+<desc id="description">Clean sample passes with 200 rows and 100 patients. Flawed sample fails despite a heuristic score of 62 due to critical input and patient overlap findings.</desc>
+<rect width="1000" height="470" rx="18" fill="#f3f6fa"/>
+<text x="36" y="48" font-family="Arial,sans-serif" font-size="26" font-weight="700" fill="#142b46">dicleak · patient-level split checks</text>
+<text x="36" y="78" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">Real CLI results from the checked-in synthetic samples · version 0.1.1</text>
+<rect x="36" y="106" width="448" height="268" rx="12" fill="white" stroke="#dbe2ea"/>
+<text x="60" y="140" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#142b46">clean_splits.csv</text>
+<text x="60" y="184" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#127852">Gate: PASS</text>
+<text x="60" y="214" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">Heuristic score: 100/100 (unvalidated)</text>
+<text x="60" y="250" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">Input 200 · valid 200 · invalid 0</text>
+<text x="60" y="277" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">100 unique patients in valid rows</text>
+<text x="60" y="315" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">No findings from configured checks</text>
+<text x="60" y="342" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">Patient identifiers hidden by default</text>
+<rect x="516" y="106" width="448" height="268" rx="12" fill="white" stroke="#dbe2ea"/>
+<text x="540" y="140" font-family="Arial,sans-serif" font-size="17" font-weight="700" fill="#142b46">flawed_splits.csv</text>
+<text x="540" y="184" font-family="Arial,sans-serif" font-size="28" font-weight="700" fill="#b43a36">Gate: FAIL</text>
+<text x="540" y="214" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">Heuristic score: 62/100 (unvalidated)</text>
+<text x="540" y="250" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">Input 206 · valid 203 · invalid 3</text>
+<text x="540" y="277" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">101 unique patients in valid rows</text>
+<text x="540" y="315" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">CRITICAL always fails the audit gate</text>
+<text x="540" y="342" font-family="Arial,sans-serif" font-size="15" fill="#4c5b6c">Patient identifiers hidden by default</text>
+<text x="36" y="415" font-family="Arial,sans-serif" font-size="15" font-weight="700" fill="#142b46">Manifest audit only. Passing these checks does not validate a model or establish publication readiness.</text>
+<text x="36" y="442" font-family="Arial,sans-serif" font-size="14" fill="#4c5b6c">Python standard library · Markdown + JSON · holdout and explicit held-out fold assignments</text>
+</svg>
